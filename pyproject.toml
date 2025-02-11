@@ -1,0 +1,18 @@
+[project]
+name = "pylabs"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Rohit Mungre",email = "rohitmungre@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pandas (>=2.2.3,<3.0.0)",
+    "numpy (>=2.2.2,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
