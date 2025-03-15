@@ -1,10 +1,12 @@
 from fastapi import FastAPI
-from fast.apis import quotes, jokes, my_ip, palindrome
+from fast.apis import quotes, jokes, my_ip, palindrome, health, status
 
 # Initialize FastAPI app
-app = FastAPI()
+app = FastAPI(title="Rohit's API", version="1.0.0")
 
 # Include API routers
+app.include_router(status.router)
+app.include_router(health.router)
 app.include_router(quotes.router)
 app.include_router(jokes.router)
 app.include_router(my_ip.router)
